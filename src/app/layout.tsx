@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 
 export { metadata } from "@/metadata";
 
-import { PostHogProvider } from "@/components/PostHogProvider";
 import { cn } from "@/lib/utils";
 import { inter as fontSans } from "@/styles/fonts";
 
@@ -20,11 +19,11 @@ export default function RootLayout({
 		<html lang="en">
 			<body
 				className={cn(
-					"min-h-screen bg-background font-sans antialiased",
+					"min-h-screen bg-roast-dark text-white font-sans antialiased",
 					fontSans.className,
 				)}
 			>
-				<PostHogProvider>{children}</PostHogProvider>
+				{children}
 			</body>
 		</html>
 	);
