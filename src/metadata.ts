@@ -6,11 +6,8 @@ export const metadata: Metadata = {
 			url: "https://www.linkedin.com/in/enriqueflores000/",
 		},
 	],
-	description: "Nextjs template",
-	keywords: ["Nextjs", "fullstack", "templates"],
-	metadataBase: new URL("https://next-learn-dashboard.vercel.sh"),
-	title: {
-		default: "Nextjs template",
-		template: "%s | Nextjs template",
-	},
+	description:
+		"Roast Nights is a community where founders get the feedback they actually need, not what they want to hear.",
+	keywords: ["pitch day", "startup", "feedback", "community", "founders"],
+	title: "Roast Nights",
 };
