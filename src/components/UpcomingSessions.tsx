@@ -6,31 +6,13 @@ import { Card } from "@/components/ui/card";
 
 const sessions = [
 	{
-		date: "April 15, 2025",
-		id: 1,
-		location: "Tech Hub Downtown",
-		spotsLeft: 8,
-		tags: ["Acceleration", "English Only"],
-		time: "6:30 PM - 9:30 PM",
-		title: "Acceleration Stage Founders",
-	},
-	{
-		date: "April 29, 2025",
+		date: "April 25, 2025",
 		id: 2,
-		location: "Innovation Center",
-		spotsLeft: 5,
-		tags: ["Pre-Seed", "Bilingual"],
+		spotsLeft: 15,
 		time: "7:00 PM - 10:00 PM",
-		title: "Pre-Seed Startups Roast",
-	},
-	{
-		date: "May 13, 2025",
-		id: 3,
-		location: "Startup Studio East",
-		spotsLeft: 12,
-		tags: ["All Stages", "Female Founders"],
-		time: "6:00 PM - 9:00 PM",
-		title: "Female Founders Edition",
+		title: "Pre-Seed & acceleration Stage Founders",
+		lumaLink: "https://lu.ma/7spbmwm4",
+		location: "San Borja",
 	},
 ];
 
@@ -80,20 +62,14 @@ const UpcomingSessions = () => {
 									</div>
 								</div>
 
-								<div className="flex flex-wrap gap-2 mb-6">
-									{session.tags.map((tag) => (
-										<Badge
-											key={tag}
-											variant="secondary"
-											className="bg-roast-lightgray text-white"
-										>
-											{tag}
-										</Badge>
-									))}
-								</div>
-
-								<Button className="w-full bg-roast-red hover:bg-roast-red/90">
-									Reserve Spot
+								<Button
+									asChild
+									variant="link"
+									className="w-full bg-roast-red hover:bg-roast-red/90"
+								>
+									<a href={session.lumaLink} target="_blank" rel="noreferrer">
+										<p className="text-white font-semibold">Reserve Spot</p>
+									</a>
 								</Button>
 							</div>
 						</Card>
