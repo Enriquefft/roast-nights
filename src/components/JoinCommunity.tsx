@@ -25,16 +25,17 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "./ui/select";
+import { toast } from "sonner";
 
 const JoinCommunity = () => {
 	const form = useForm({
 		defaultValues: {
 			agreement_feedback: false,
 			agreement_privacy: false,
-			name: "hi",
-			phone: "+51984724707",
+			name: "",
+			phone: "",
 			stage: "idea" as const,
-			startupName: "none",
+			startupName: "",
 			text: "",
 		},
 		resolver: zodResolver(
@@ -67,7 +68,10 @@ const JoinCommunity = () => {
 		} catch (error: unknown) {
 			console.error("Error submitting form data:", error);
 			showErrorToast(error);
+			return;
 		}
+
+		toast(`Thank you for joining ${data.name}!`);
 	};
 
 	return (
